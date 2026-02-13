@@ -14,12 +14,10 @@ import javax.swing.*;
 public class Practica1 {
 
     public static ArrayList<Inventario> auto = new ArrayList<>();
-    Recursividad rev = new Recursividad();
+    static Recursividad rev = new Recursividad();
 
     public static void main(String[] args) {
         int op = Integer.parseInt(JOptionPane.showInputDialog(menu()));
-        int decimal = 23/2;
-        System.out.println(decimal);
         while (op != 8) {
             switch (op) {
                 case 1:
@@ -29,6 +27,10 @@ public class Practica1 {
                 case 2:
 
                     JOptionPane.showMessageDialog(null, lista(auto));
+                    break;
+                case 3:
+                    rev.menurecursividad();
+                    break;
             }
             op = Integer.parseInt(JOptionPane.showInputDialog(menu()));
         }
